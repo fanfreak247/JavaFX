@@ -22,13 +22,9 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         //Scene 1
         
         Label greeting = new Label("Welcome to the First Scene");
-        
         Button toSceneTwo = new Button("Press here to go to the Second Scene!");
-        
         toSceneTwo.setOnAction(e -> window.setScene(secondScene)); // When the button is pressed goes to the second scene
-        
         VBox layout = new VBox(); //Vertical Box, a type of layout that stacks things on top of each other
-        
         layout.getChildren().addAll(greeting, toSceneTwo);
         
         firstScene = new Scene(layout, 400, 400);
@@ -36,18 +32,14 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         //Scene 2
         
         Label greeting2 = new Label("Welcome to the Second Scene!");
-        
         Button toSceneOne = new Button("Press here to go back to the First Scene!");
-        
         toSceneOne.setOnAction(e -> window.setScene(firstScene));
-        
         VBox layout2 = new VBox();
-        
         layout2.getChildren().addAll(greeting2, toSceneOne);
+        secondScene = new Scene(layout2, 400, 400)
         
-        secondScene = new Scene(layout2, 400, 400);
-        
-        window.setScene(firstScene);
+            
+       window.setScene(firstScene);
         
         window.show();
 
